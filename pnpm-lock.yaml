@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@cloudflare/next-on-pages': 429ac4b326cb53a0146950a4fb673a327243f5598f084b27f2b872580d515ad5
+
 importers:
 
   .:
@@ -13,7 +16,7 @@ importers:
         version: 1.7.4
       '@cloudflare/next-on-pages':
         specifier: ^1.13.6
-        version: 1.13.6(@cloudflare/workers-types@4.20241205.0)(vercel@39.1.1)(wrangler@3.93.0(@cloudflare/workers-types@4.20241205.0))
+        version: 1.13.6(patch_hash=429ac4b326cb53a0146950a4fb673a327243f5598f084b27f2b872580d515ad5)(@cloudflare/workers-types@4.20241205.0)(vercel@39.1.1)(wrangler@3.93.0(@cloudflare/workers-types@4.20241205.0))
       '@radix-ui/react-alert-dialog':
         specifier: ^1.1.4
         version: 1.1.4(@types/react-dom@19.0.0)(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -4706,7 +4709,7 @@ snapshots:
     dependencies:
       mime: 3.0.0
 
-  '@cloudflare/next-on-pages@1.13.6(@cloudflare/workers-types@4.20241205.0)(vercel@39.1.1)(wrangler@3.93.0(@cloudflare/workers-types@4.20241205.0))':
+  '@cloudflare/next-on-pages@1.13.6(patch_hash=429ac4b326cb53a0146950a4fb673a327243f5598f084b27f2b872580d515ad5)(@cloudflare/workers-types@4.20241205.0)(vercel@39.1.1)(wrangler@3.93.0(@cloudflare/workers-types@4.20241205.0))':
     dependencies:
       acorn: 8.14.0
       ast-types: 0.14.2

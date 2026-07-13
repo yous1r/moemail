@@ -1,0 +1,12 @@
+diff --git a/dist/index.js b/dist/index.js
+index 4486bc1ef9cf3847f9b41da7297d119cfddfb3c0..5b9e5e1d6d01f8e913a24d95c9888930e2f1a24e 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -12971,6 +12971,7 @@ var builtInModulesPlugin = {
+     build3.onLoad(
+       { filter: /.*/, namespace: "built-in-modules" },
+       ({ path: path2 }) => {
++        if (path2 === "async_hooks") path2 = "node:async_hooks";
+         return {
+           contents: `export * from '${path2}'`,
+           loader: "js"

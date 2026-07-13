@@ -24,6 +24,17 @@ const nextConfig: import('next').NextConfig = {
       }
     ],
   },
+  webpack: (config, { webpack, nextRuntime }) => {
+    if (nextRuntime === 'edge') {
+      config.plugins.push(
+        new webpack.NormalModuleReplacementPlugin(
+          /^async_hooks$/,
+          'node:async_hooks'
+        )
+      )
+    }
+    return config
+  },
 };
 
 export default withNextIntl(nextConfig)

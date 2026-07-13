@@ -3,3 +3,5 @@ allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
+patchedDependencies:
+  '@cloudflare/next-on-pages': patches/@cloudflare__next-on-pages.patch
