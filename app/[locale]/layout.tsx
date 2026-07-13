@@ -116,6 +116,19 @@ export default async function LocaleLayout({
         <meta name="apple-mobile-web-app-title" content="MoeMail" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                  for(let registration of registrations) {
+                    registration.unregister();
+                  }
+                });
+              }
+            `,
+          }}
+        />
       </head>
       <body 
         className={cn(

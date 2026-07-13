@@ -1,4 +1,3 @@
-import withPWA from 'next-pwa'
 import createNextIntlPlugin from 'next-intl/plugin'
 import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 
@@ -27,13 +26,4 @@ const nextConfig = {
   },
 };
 
-const withPWAConfigured = withPWA({
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development',
-}) as any
-
-const configWithPWA = withPWAConfigured(nextConfig as any) as any
-
-export default withNextIntl(configWithPWA)
+export default withNextIntl(nextConfig)
